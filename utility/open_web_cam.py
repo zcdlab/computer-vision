@@ -19,13 +19,8 @@ while True:
     cv2.imshow('gray_frame', gray_frame)
     cv2.imshow('frame', frame)
 
-    k = cv2.waitKey(33)
-    if k == 27:    # Esc key to stop
+    if cv2.waitKey(1) >= 0:  # Break with ESC
         break
-    elif k == -1:  # normally -1 returned,so don't print it
-        continue
-    else:
-        print (k) # else print its value
     
 cap.release()
 out.release()
